@@ -1,0 +1,191 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  line-height: auto;
+  color: #fff;
+  text-align: center;
+}
+
+.countdown-timer {
+  background: url("../img/present.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(13, 8, 40, 0.9)), to(#040116));
+  background: url("../img/present.png"), linear-gradient(180deg, rgba(13, 8, 40, 0.9) 0%, #040116 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.countdown-timer__wrapper {
+  padding: 7% 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96%;
+  height: 100vh;
+  margin: auto;
+  z-index: 1;
+}
+
+.countdown-timer__title {
+  font-size: 88px;
+  text-shadow: 0 0 5px #101010, 0 0 10px #101010, 0 0 15px #101010;
+}
+
+.countdown-timer__year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 204px;
+  line-height: 1;
+  z-index: -1;
+  opacity: 0.6;
+  -webkit-animation: backlight 1s ease-in-out infinite alternate;
+          animation: backlight 1s ease-in-out infinite alternate;
+}
+
+.timer {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 550px;
+}
+
+.timer__block {
+  padding: 10px 20px;
+  text-shadow: 0 0 5px #101010, 0 0 10px #101010, 0 0 15px #101010;
+}
+
+@-webkit-keyframes backlight {
+  from {
+    text-shadow: 0 0 5px #f5f0f0, 0 0 20px #101010, 0 0 30px #101010, 0 0 40px #101010, 0 0 50px #9052ad, 0 0 60px #9052ad, 0 0 70px #9052ad;
+    opacity: 0.5;
+  }
+  to {
+    text-shadow: 0 0 20px #f5f0f0, 0 0 30px #f54da1, 0 0 40px #f54da1, 0 0 50px #f54da1, 0 0 60px #f54da1, 0 0 70px #f54da1, 0 0 80px #f54da1;
+    opacity: 0.5;
+  }
+}
+
+@keyframes backlight {
+  from {
+    text-shadow: 0 0 5px #f5f0f0, 0 0 20px #101010, 0 0 30px #101010, 0 0 40px #101010, 0 0 50px #9052ad, 0 0 60px #9052ad, 0 0 70px #9052ad;
+    opacity: 0.5;
+  }
+  to {
+    text-shadow: 0 0 20px #f5f0f0, 0 0 30px #f54da1, 0 0 40px #f54da1, 0 0 50px #f54da1, 0 0 60px #f54da1, 0 0 70px #f54da1, 0 0 80px #f54da1;
+    opacity: 0.5;
+  }
+}
+
+.preloader {
+  height: 161px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #ccffe6;
+  border-color: #ccffe6 transparent #ccffe6 transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#snow-animation-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .countdown-timer__title {
+    font-size: 66px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .countdown-timer__title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .countdown-timer__title {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  body {
+    font-size: 28px;
+  }
+  .countdown-timer__year {
+    font-size: 126px;
+  }
+  .timer {
+    width: 100%;
+  }
+  .preloader {
+    height: 143px;
+  }
+}
+
+@media screen and (max-width: 433px) {
+  .preloader {
+    height: 286px;
+  }
+}

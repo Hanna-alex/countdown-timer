@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>таймер обратного отсчета</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div id="snow-animation-container">
+      <section class="countdown-timer">
+        <div class="countdown-timer__wrapper">
+          <h1 class="countdown-timer__title">до Нового Года осталось:</h1>
+          <div id="year" class="countdown-timer__year"></div>
+
+          <div class="timer" id="timer">
+            <div class="timer__block">
+              <h2 class="timer__num" id="days">00</h2>
+              <small>дней</small>
+            </div>
+            <!-- /.timer__block -->
+            <div class="timer__block">
+              <h2 class="timer__num" id="hours">00</h2>
+              <small>часов</small>
+            </div>
+            <!-- /.timer__block -->
+
+            <div class="timer__block">
+              <h2 class="timer__num" id="minutes">00</h2>
+              <small>минут</small>
+            </div>
+
+            <!-- /.timer__block -->
+            <div class="timer__block">
+              <h2 class="timer__num" id="seconds">00</h2>
+              <small>секунд</small>
+            </div>
+            <!-- /.timer__block -->
+          </div>
+          <!-- /.timer -->
+          <div class="preloader" id="preloader">
+            <div class="lds-dual-ring"></div>
+          </div>
+          <!-- /.preloader -->
+        </div>
+        <!-- /.countdown__wrapper -->
+      </section>
+    </div>
+  </body>
+</html>
